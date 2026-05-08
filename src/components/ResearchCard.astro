@@ -1,20 +1,32 @@
 ---
+import Icon from "./Icon.astro";
+
 interface Props {
   title: string;
   authors: string;
   year: string;
   publication: string;
   url: string;
-  doi: string;
-  summary: string;
+  bullets: {
+    icon: "captions" | "check" | "credit-card" | "ear" | "eye" | "film" | "gesture" | "image" | "languages" | "mail" | "offline" | "repeat" | "settings" | "smartphone" | "sparkles" | "target" | "tools";
+    text: string;
+  }[];
 }
 
-const { title, authors, year, publication, url, doi, summary } = Astro.props;
+const { title, authors, year, publication, url, bullets } = Astro.props;
 ---
 
 <article class="research-card">
-  <div class="research-meta">{authors} · {year} · {publication}</div>
   <h2>{title}</h2>
-  <p>{summary}</p>
-  <a href={url} target="_blank" rel="noopener noreferrer">DOI: {doi}</a>
+  <ul class="research-points">
+    {bullets.map((point) => (
+      <li>
+        <span class="research-point-icon"><Icon name={point.icon} /></span>
+        <span>{point.text}</span>
+      </li>
+    ))}
+  </ul>
+  <a class="research-meta" href={url} target="_blank" rel="noopener noreferrer">
+    {authors} · {year} · {publication}
+  </a>
 </article>

@@ -2,7 +2,7 @@ export const home = {
   en: {
     eyebrow: "Video player for language learning",
     title: "Learn languages with the videos you already want to watch.",
-    lead: "Lingua Player turns online video, YouTube, downloaded movies, TV shows, and unusual video formats into a language-learning workspace with subtitle translation, OCR, flashcards, and offline translation.",
+    lead: "Lingüa Player turns online video, YouTube, downloaded movies, TV shows, and unusual video formats into a language-learning workspace with subtitle translation, OCR, flashcards, and offline translation.",
     cta: "Download on the App Store",
     secondaryCta: "Read the research",
     proof: "Built for immersion, vocabulary capture, and spaced repetition.",
@@ -41,7 +41,7 @@ export const home = {
   ru: {
     eyebrow: "Видеоплеер для изучения языков",
     title: "Учите языки на видео, которые вам действительно хочется смотреть.",
-    lead: "Lingua Player превращает онлайн-видео, YouTube, загруженные фильмы, сериалы и нестандартные форматы видео в рабочее пространство для изучения языка: перевод субтитров, OCR, карточки и оффлайн-перевод.",
+    lead: "Lingüa Player превращает онлайн-видео, YouTube, загруженные фильмы, сериалы и нестандартные форматы видео в рабочее пространство для изучения языка: перевод субтитров, OCR, карточки и оффлайн-перевод.",
     cta: "Скачать в App Store",
     secondaryCta: "Исследования",
     proof: "Для иммерсивного просмотра, сохранения слов и интервального повторения.",

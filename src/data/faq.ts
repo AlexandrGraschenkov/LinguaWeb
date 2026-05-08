@@ -2,11 +2,11 @@ export const faq = {
   en: [
     {
       question: "Can I watch YouTube and other online videos?",
-      answer: "Yes. Lingua Player is designed for online video sources, including YouTube. Availability can depend on the source website, network access, and platform restrictions."
+      answer: "Yes. Lingüa Player is designed for online video sources, including YouTube. Availability can depend on the source website, network access, and platform restrictions."
     },
     {
       question: "Can I add offline movies and TV shows?",
-      answer: "Yes. You can add local video files and use Lingua Player as a flexible offline player for formats that are often not supported by the default iOS player, including MKV-style workflows."
+      answer: "Yes. You can add local video files and use Lingüa Player as a flexible offline player for formats that are often not supported by the default iOS player, including MKV-style workflows."
     },
     {
       question: "How does subtitle translation work?",
@@ -14,15 +14,15 @@ export const faq = {
     },
     {
       question: "Can the app translate text visible inside a video frame?",
-      answer: "Yes. When you pause the video, Lingua Player can recognize visible text in the frame and translate it into your native language."
+      answer: "Yes. When you pause the video, Lingüa Player can recognize visible text in the frame and translate it into your native language."
     },
     {
-      question: "Does Lingua Player work offline?",
+      question: "Does Lingüa Player work offline?",
       answer: "Yes. If your video and subtitles are available offline, you can study without internet. The app also includes an offline translation option for private, connection-free learning."
     },
     {
       question: "Which translators are supported?",
-      answer: "Lingua Player supports multiple translation providers, including online translators and a fully offline translator. The exact set may vary by app version and selected language pair."
+      answer: "Lingüa Player supports multiple translation providers, including online translators and a fully offline translator. The exact set may vary by app version and selected language pair."
     },
     {
       question: "How do flashcards work?",
@@ -35,36 +35,32 @@ export const faq = {
   ],
   ru: [
     {
-      question: "Можно ли смотреть YouTube и другие онлайн-видео?",
-      answer: "Да. Lingua Player рассчитан на онлайн-источники видео, включая YouTube. Доступность может зависеть от сайта-источника, сети и ограничений платформы."
+      question: "Зачем мне отдельный плеер, если я уже смотрю видео в YouTube или VLC?",
+      answer: "Обычный плеер просто показывает видео. Lingüa Player нужен, когда вы хотите смотреть настоящий контент на другом языке и сразу разбирать непонятные места: переводить субтитры, сохранять слова, возвращаться к ним в карточках и не переключаться между несколькими приложениями."
     },
     {
-      question: "Можно ли добавлять оффлайн-фильмы и сериалы?",
-      answer: "Да. Можно добавлять локальные видеофайлы и использовать Lingua Player как гибкий оффлайн-плеер для форматов, которые часто не поддерживаются стандартным iOS-плеером, включая сценарии с MKV."
+      question: "Подойдет ли приложение для фильмов и сериалов, которые уже лежат у меня на устройстве?",
+      answer: "Да. Можно открывать локальные видеофайлы, включая сценарии с форматами вроде MKV, где стандартный iOS-плеер часто неудобен. Идея в том, чтобы учиться не только на коротких роликах, но и на длинных фильмах, сериалах, лекциях или загруженных видео."
     },
     {
-      question: "Как работает перевод субтитров?",
-      answer: "Если у видео есть субтитры, можно нажимать на слова или фразы, переводить их и сохранять полезную лексику в карточки."
+      question: "Если я буду переводить каждое незнакомое слово, просмотр не превратится в мучение?",
+      answer: "Не должен. Перевод встроен так, чтобы вы останавливались только там, где действительно потеряли смысл. Можно быстро нажать на слово или фразу в субтитрах, посмотреть перевод, сохранить полезное и продолжить просмотр без отдельного словаря и ручного копирования."
     },
     {
-      question: "Можно ли переводить текст, который виден прямо в кадре?",
-      answer: "Да. На паузе Lingua Player может распознать видимый текст в кадре и перевести его на родной язык."
+      question: "А если субтитров нет или в кадре важная надпись?",
+      answer: "Если субтитры доступны, приложение работает с ними напрямую. Если нужно понять текст прямо на экране, можно поставить видео на паузу, распознать видимую надпись в кадре и перевести ее. Это полезно для вывесок, сообщений, презентаций и сцен, где смысл спрятан не в репликах."
     },
     {
-      question: "Lingua Player работает без интернета?",
-      answer: "Да. Если видео и субтитры доступны оффлайн, можно заниматься без подключения. В приложении также есть оффлайн-переводчик для приватного обучения без сети."
+      question: "Что реально работает без интернета?",
+      answer: "Оффлайн-просмотр работает, если само видео и нужные субтитры уже доступны на устройстве. Для перевода есть оффлайн-вариант, поэтому базовое обучение можно продолжать в дороге или без стабильной сети. Онлайн-источники и некоторые переводчики, естественно, требуют подключения."
     },
     {
-      question: "Какие переводчики поддерживаются?",
-      answer: "Lingua Player поддерживает несколько переводчиков, включая онлайн-переводчики и полностью оффлайн-вариант. Точный набор может зависеть от версии приложения и языковой пары."
+      question: "Что происходит со словами, которые я сохраняю?",
+      answer: "Они попадают в карточки для повторения. Это не отдельный учебник и не искусственный курс: карточки растут из того, что вы сами смотрели, поэтому слова обычно запоминаются вместе со сценой, голосом и контекстом. Сейчас основной упор на интервальное повторение; дополнительные упражнения можно развивать поверх этого."
     },
     {
-      question: "Как работают карточки?",
-      answer: "Сохраненные слова можно повторять через карточки с интервальным повторением, по логике близкой к Anki. В будущих версиях планируются дополнительные типы упражнений."
-    },
-    {
-      question: "Какие данные собирает приложение?",
-      answer: "Приложение может собирать аналитику использования, диагностические данные о сбоях, информацию об устройстве/версии приложения и данные о покупках, необходимые для работы и улучшения продукта. Подробности есть в Политике конфиденциальности."
+      question: "Можно ли пользоваться приложением спокойно с точки зрения приватности?",
+      answer: "Lingüa Player не пытается превращать ваши фильмы и словарь в социальную ленту. Для работы и улучшения приложения могут использоваться стандартные вещи вроде диагностики сбоев, информации о версии приложения, покупках и общей аналитики. Подробный список описан в Политике конфиденциальности."
     }
   ]
 };

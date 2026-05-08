@@ -1,5 +1,7 @@
 export const contactEmail = "alexandr.graschenkov91@gmail.com";
 export const appStoreUrl = "https://apps.apple.com/app/id6746671760";
+export const subscriptionsUrl = "https://apps.apple.com/account/subscriptions";
+export const refundUrl = "https://reportaproblem.apple.com/";
 
 export const nav = {
   en: [

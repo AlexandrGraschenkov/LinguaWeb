@@ -1,7 +1,20 @@
 ---
+import { withBase } from "../lib/paths";
+
+interface LegalLink {
+  href: string;
+  label: string;
+}
+
+type LegalParagraph = string | {
+  before: string;
+  link: LegalLink;
+  after: string;
+};
+
 interface LegalSection {
   heading: string;
-  body: string[];
+  body: LegalParagraph[];
 }
 
 interface Props {
@@ -14,16 +27,28 @@ const { title, updated, sections } = Astro.props;
 ---
 
 <section class="page-hero compact">
-  <p class="eyebrow">Lingua Player</p>
+  <p class="eyebrow">Lingüa Player</p>
   <h1>{title}</h1>
   <p>{updated}</p>
 </section>
 
 <section class="legal-content">
-  {sections.map((section) => (
-    <article>
-      <h2>{section.heading}</h2>
-      {section.body.map((paragraph) => <p>{paragraph}</p>)}
-    </article>
-  ))}
+  <article class="legal-document">
+    {sections.map((section) => (
+      <div class="legal-section">
+        <h2>{section.heading}</h2>
+        {section.body.map((paragraph) => (
+          typeof paragraph === "string" ? (
+            <p>{paragraph}</p>
+          ) : (
+            <p>
+              {paragraph.before}
+              <a href={withBase(paragraph.link.href)}>{paragraph.link.label}</a>
+              {paragraph.after}
+            </p>
+          )
+        ))}
+      </div>
+    ))}
+  </article>
 </section>

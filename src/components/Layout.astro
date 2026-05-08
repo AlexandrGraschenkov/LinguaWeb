@@ -22,6 +22,9 @@ const { title, description, locale, currentPath } = Astro.props;
     <meta name="description" content={description} />
     <meta name="theme-color" content="#1f1f1f" />
     <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/jpeg" href={withBase("/images/app-icon.jpg")} />
   </head>
   <body>

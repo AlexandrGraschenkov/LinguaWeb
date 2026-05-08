@@ -7,13 +7,17 @@ export const legal = {
         {
           heading: "Introduction",
           body: [
-            "Lingua Player (referred to as \"Lingua Player\", \"we\", or \"us\") values your privacy and is committed to protecting it. This Privacy Policy explains how we handle information when you use our iOS application."
+            "Lingüa Player (referred to as \"Lingüa Player\", \"we\", or \"us\") values your privacy and is committed to protecting it. This Privacy Policy explains how we handle information when you use our iOS application."
           ]
         },
         {
           heading: "Scope",
           body: [
-            "This Privacy Policy applies to the Lingua Player iOS application. By using the app, you agree to the practices described here. We may update this policy from time to time."
+            {
+              before: "This Privacy Policy applies to the Lingüa Player iOS application. By using the app, you agree to the practices described here and to our ",
+              link: { href: "/terms.html", label: "Terms of Use" },
+              after: ". We may update this policy from time to time."
+            }
           ]
         },
         {
@@ -39,7 +43,7 @@ export const legal = {
         {
           heading: "Children's Privacy",
           body: [
-            "Lingua Player may be used by younger users with parental supervision. We do not knowingly collect personal information from children under 16. If you believe a child has provided personal information, contact us and we will take appropriate steps to delete it if found."
+            "Lingüa Player may be used by younger users with parental supervision. We do not knowingly collect personal information from children under 16. If you believe a child has provided personal information, contact us and we will take appropriate steps to delete it if found."
           ]
         },
         {
@@ -75,13 +79,17 @@ export const legal = {
         {
           heading: "Введение",
           body: [
-            "Lingua Player (далее \"Lingua Player\", \"мы\" или \"нас\") уважает вашу конфиденциальность и стремится защищать ее. Эта Политика объясняет, как мы обрабатываем информацию при использовании iOS-приложения."
+            "Lingüa Player (далее \"Lingüa Player\", \"мы\" или \"нас\") уважает вашу конфиденциальность и стремится защищать ее. Эта Политика объясняет, как мы обрабатываем информацию при использовании iOS-приложения."
           ]
         },
         {
           heading: "Область действия",
           body: [
-            "Эта Политика конфиденциальности применяется к iOS-приложению Lingua Player. Используя приложение, вы соглашаетесь с описанными здесь практиками. Мы можем периодически обновлять эту Политику."
+            {
+              before: "Эта Политика конфиденциальности применяется к iOS-приложению Lingüa Player. Используя приложение, вы соглашаетесь с описанными здесь практиками и с нашими ",
+              link: { href: "/ru/terms.html", label: "Условиями использования" },
+              after: ". Мы можем периодически обновлять эту Политику."
+            }
           ]
         },
         {
@@ -107,7 +115,7 @@ export const legal = {
         {
           heading: "Конфиденциальность детей",
           body: [
-            "Lingua Player может использоваться младшими пользователями под присмотром родителей. Мы сознательно не собираем персональную информацию детей младше 16 лет. Если вы считаете, что ребенок предоставил персональные данные, свяжитесь с нами, и мы примем необходимые меры для удаления таких данных при обнаружении."
+            "Lingüa Player может использоваться младшими пользователями под присмотром родителей. Мы сознательно не собираем персональную информацию детей младше 16 лет. Если вы считаете, что ребенок предоставил персональные данные, свяжитесь с нами, и мы примем необходимые меры для удаления таких данных при обнаружении."
           ]
         },
         {
@@ -145,7 +153,7 @@ export const legal = {
         {
           heading: "Introduction",
           body: [
-            "Welcome to Lingua Player. These Terms of Use govern your use of our iOS application. By downloading, accessing, or using the app, you agree to comply with these Terms."
+            "Welcome to Lingüa Player. These Terms of Use govern your use of our iOS application. By downloading, accessing, or using the app, you agree to comply with these Terms."
           ]
         },
         {
@@ -157,7 +165,7 @@ export const legal = {
         {
           heading: "License to Use the App",
           body: [
-            "Lingua Player grants you a limited, non-exclusive, non-transferable, revocable license to use the app for personal, non-commercial purposes. You agree not to modify, copy, distribute, reverse-engineer, decompile, or misuse the app except as permitted by applicable law."
+            "Lingüa Player grants you a limited, non-exclusive, non-transferable, revocable license to use the app for personal, non-commercial purposes. You agree not to modify, copy, distribute, reverse-engineer, decompile, or misuse the app except as permitted by applicable law."
           ]
         },
         {
@@ -187,13 +195,13 @@ export const legal = {
         {
           heading: "Disclaimers",
           body: [
-            "The app is provided \"as is\" without warranties of any kind. Lingua Player does not guarantee error-free or uninterrupted operation."
+            "The app is provided \"as is\" without warranties of any kind. Lingüa Player does not guarantee error-free or uninterrupted operation."
           ]
         },
         {
           heading: "Limitation of Liability",
           body: [
-            "To the fullest extent allowed by law, Lingua Player shall not be liable for damages arising from your use of the app, including indirect, incidental, or consequential damages."
+            "To the fullest extent allowed by law, Lingüa Player shall not be liable for damages arising from your use of the app, including indirect, incidental, or consequential damages."
           ]
         },
         {
@@ -223,7 +231,7 @@ export const legal = {
         {
           heading: "Введение",
           body: [
-            "Добро пожаловать в Lingua Player. Эти Условия использования регулируют использование нашего iOS-приложения. Скачивая, открывая или используя приложение, вы соглашаетесь соблюдать эти Условия."
+            "Добро пожаловать в Lingüa Player. Эти Условия использования регулируют использование нашего iOS-приложения. Скачивая, открывая или используя приложение, вы соглашаетесь соблюдать эти Условия."
           ]
         },
         {
@@ -235,7 +243,7 @@ export const legal = {
         {
           heading: "Лицензия на использование приложения",
           body: [
-            "Lingua Player предоставляет вам ограниченную, неисключительную, непередаваемую и отзывную лицензию на использование приложения в личных некоммерческих целях. Вы соглашаетесь не изменять, не копировать, не распространять, не декомпилировать, не выполнять обратную разработку и не использовать приложение ненадлежащим образом, кроме случаев, разрешенных законом."
+            "Lingüa Player предоставляет вам ограниченную, неисключительную, непередаваемую и отзывную лицензию на использование приложения в личных некоммерческих целях. Вы соглашаетесь не изменять, не копировать, не распространять, не декомпилировать, не выполнять обратную разработку и не использовать приложение ненадлежащим образом, кроме случаев, разрешенных законом."
           ]
         },
         {
@@ -265,13 +273,13 @@ export const legal = {
         {
           heading: "Отказ от гарантий",
           body: [
-            "Приложение предоставляется \"как есть\" без каких-либо гарантий. Lingua Player не гарантирует бесперебойную или безошибочную работу."
+            "Приложение предоставляется \"как есть\" без каких-либо гарантий. Lingüa Player не гарантирует бесперебойную или безошибочную работу."
           ]
         },
         {
           heading: "Ограничение ответственности",
           body: [
-            "В максимальной степени, разрешенной законом, Lingua Player не несет ответственности за ущерб, возникший в связи с использованием приложения, включая косвенный, случайный или последующий ущерб."
+            "В максимальной степени, разрешенной законом, Lingüa Player не несет ответственности за ущерб, возникший в связи с использованием приложения, включая косвенный, случайный или последующий ущерб."
           ]
         },
         {

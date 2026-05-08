@@ -7,15 +7,11 @@ interface Props {
 }
 
 const { locale } = Astro.props;
-const footerText = locale === "en"
-  ? "Video player for language learning."
-  : "Видеоплеер для изучения языков.";
 ---
 
 <footer class="site-footer">
   <div>
-    <strong>Lingua Player</strong>
-    <p>{footerText}</p>
+    <strong>Lingüa Player</strong>
   </div>
   <nav aria-label={locale === "en" ? "Legal links" : "Юридические ссылки"}>
     {legalLinks[locale].map((item) => (

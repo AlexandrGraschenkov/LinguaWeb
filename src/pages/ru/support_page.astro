@@ -1,38 +1,45 @@
 ---
 import Layout from "../../components/Layout.astro";
-import { contactEmail } from "../../data/site";
+import Icon from "../../components/Icon.astro";
+import { contactEmail, refundUrl, subscriptionsUrl } from "../../data/site";
 ---
 
 <Layout
-  title="Поддержка - Lingua Player"
-  description="Связь с поддержкой Lingua Player и быстрые шаги диагностики."
+  title="Поддержка - Lingüa Player"
+  description="Связь с поддержкой Lingüa Player и быстрые шаги диагностики."
   locale="ru"
   currentPath="/ru/support_page.html"
 >
-  <section class="page-hero compact">
-    <p class="eyebrow">Поддержка</p>
-    <h1>Нужна помощь с Lingua Player?</h1>
+  <section class="page-hero compact support-hero">
+    <h1>Нужна помощь с Lingüa Player?</h1>
     <p>Опишите проблему, модель устройства, версию iOS и версию приложения. Если проблема визуальная, полезны скриншоты или запись экрана.</p>
   </section>
 
   <section class="section">
     <div class="support-grid">
       <article class="support-card">
-        <h2>Контакты</h2>
+        <div class="card-title">
+          <Icon name="mail" />
+          <h2>Контакты</h2>
+        </div>
         <p>Напишите на почту поддержки и укажите источник видео или тип файла, если проблема связана с воспроизведением.</p>
         <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
       </article>
       <article class="support-card">
-        <h2>Быстрая проверка</h2>
-        <p>Обновите приложение, перезапустите устройство, проверьте разрешения доступа к файлам и попробуйте открыть то же видео в другом плеере.</p>
+        <div class="card-title">
+          <Icon name="credit-card" />
+          <h2>Как отменить подписку</h2>
+        </div>
+        <p>Откройте App Store на iPhone, нажмите на иконку профиля и выберите Subscriptions. Найдите Lingüa Player в списке активных подписок и выберите отмену.</p>
+        <a href={subscriptionsUrl} target="_blank" rel="noopener noreferrer">Управление подписками</a>
       </article>
       <article class="support-card">
-        <h2>Проблемы с переводом</h2>
-        <p>Проверьте выбранный переводчик, исходный язык, язык перевода и режим: онлайн или оффлайн-перевод.</p>
-      </article>
-      <article class="support-card">
-        <h2>Покупки</h2>
-        <p>Если проблема связана с покупкой в App Store, проверьте Apple ID, с которого была совершена покупка, и попробуйте восстановить покупки в приложении.</p>
+        <div class="card-title">
+          <Icon name="repeat" />
+          <h2>Как сделать возврат</h2>
+        </div>
+        <p>Если списание произошло по ошибке, запрос на возврат нужно отправить в Apple. Войдите на сайте Apple, выберите покупку и запросите возврат.</p>
+        <a href={refundUrl} target="_blank" rel="noopener noreferrer">Запросить возврат</a>
       </article>
     </div>
   </section>

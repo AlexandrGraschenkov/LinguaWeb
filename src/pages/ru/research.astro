@@ -5,13 +5,12 @@ import { research, researchIntro } from "../../data/research";
 ---
 
 <Layout
-  title="Исследования - Lingua Player"
-  description="Доказательная база подходов: аудиовизуальный input, субтитры, изучение слов и самостоятельное мобильное изучение языка."
+  title="Исследования - Lingüa Player"
+  description="Исследования о том, как видео, субтитры, работа с лексикой и самостоятельные мобильные занятия помогают изучать иностранный язык."
   locale="ru"
   currentPath="/ru/research.html"
 >
   <section class="page-hero">
-    <p class="eyebrow">Evidence-informed learning</p>
     <h1>{researchIntro.ru.title}</h1>
     <p class="lead">{researchIntro.ru.lead}</p>
   </section>
@@ -20,13 +19,12 @@ import { research, researchIntro } from "../../data/research";
     <div class="research-grid">
       {research.map((item) => (
         <ResearchCard
-          title={item.title}
+          title={item.ruShortTitle}
           authors={item.authors}
           year={item.year}
           publication={item.publication}
           url={item.url}
-          doi={item.doi}
-          summary={item.ru}
+          bullets={item.ruBullets}
         />
       ))}
     </div>

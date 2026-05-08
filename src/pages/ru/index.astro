@@ -1,26 +1,26 @@
 ---
 import Layout from "../../components/Layout.astro";
 import CTA from "../../components/CTA.astro";
+import Icon from "../../components/Icon.astro";
 import { home } from "../../data/home";
 import { withBase } from "../../lib/paths";
 
 const locale = "ru";
 const content = home.ru;
+const featureIcons = ["languages", "offline", "gesture", "captions", "repeat", "film"] as const;
 ---
 
 <Layout
-  title="Lingua Player - видеоплеер для изучения языков"
+  title="Lingüa Player - видеоплеер для изучения языков"
   description="Учите языки через онлайн-видео, YouTube, оффлайн-файлы, перевод субтитров, OCR, карточки и оффлайн-перевод."
   locale={locale}
   currentPath="/ru/"
 >
   <section class="hero">
     <div class="hero-copy">
-      <p class="eyebrow">{content.eyebrow}</p>
       <h1>{content.title}</h1>
       <p class="lead">{content.lead}</p>
-      <CTA label={content.cta} secondaryLabel={content.secondaryCta} secondaryHref={withBase("/ru/research.html")} />
-      <p class="proof-line">{content.proof}</p>
+      <CTA label={content.cta} />
     </div>
 
     <div class="phone-stage" aria-hidden="true">
@@ -34,10 +34,9 @@ const content = home.ru;
   <section class="section">
     <div class="section-heading">
       <div>
-        <p class="eyebrow">Основной сценарий</p>
         <h2>От просмотра к запоминанию, не выходя из видео.</h2>
       </div>
-      <p>Lingua Player держит учебный цикл рядом с контентом: понять момент, сохранить слово, повторить его позже.</p>
+      <p class="section-note">Lingüa Player держит учебный цикл рядом с контентом: понять момент, сохранить слово, повторить его позже.</p>
     </div>
 
     <div class="feature-grid">
@@ -56,13 +55,17 @@ const content = home.ru;
   <section class="section">
     <div class="section-heading">
       <div>
-        <p class="eyebrow">Детали</p>
         <h2>{content.featuresTitle}</h2>
       </div>
-      <p>Используйте реальные видео как input и выбирайте, сколько помощи нужно от субтитров, перевода и повторения.</p>
+      <p class="section-note">Используйте реальные видео как input и выбирайте, сколько помощи нужно от субтитров, перевода и повторения.</p>
     </div>
     <div class="pill-grid">
-      {content.features.map((feature) => <div class="pill">{feature}</div>)}
+      {content.features.map((feature, index) => (
+        <div class="pill">
+          <Icon name={featureIcons[index]} />
+          <span>{feature}</span>
+        </div>
+      ))}
     </div>
   </section>
 </Layout>

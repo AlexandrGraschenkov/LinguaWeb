@@ -9,14 +9,19 @@ interface Props {
 
 const { locale, currentPath } = Astro.props;
 const switchPath = alternateLocalePath(currentPath, locale);
-const switchLabel = locale === "en" ? "RU" : "EN";
+const currentLanguage = locale === "en"
+  ? { flag: "🇺🇸", label: "EN", name: "English" }
+  : { flag: "🇷🇺", label: "RU", name: "Русский" };
+const nextLanguage = locale === "en"
+  ? { flag: "🇷🇺", label: "RU", name: "Русский" }
+  : { flag: "🇺🇸", label: "EN", name: "English" };
 const homePath = locale === "en" ? "/" : "/ru/";
 ---
 
 <header class="site-header">
-  <a class="brand" href={withBase(homePath)} aria-label="Lingua Player home">
+  <a class="brand" href={withBase(homePath)} aria-label="Lingüa Player home">
     <img src={withBase("/images/app-icon.jpg")} alt="" />
-    <span>Lingua Player</span>
+    <span>Lingüa Player</span>
   </a>
 
   <nav class="main-nav" aria-label={locale === "en" ? "Main navigation" : "Основная навигация"}>
@@ -27,5 +32,16 @@ const homePath = locale === "en" ? "/" : "/ru/";
     ))}
   </nav>
 
-  <a class="language-link" href={withBase(switchPath)}>{switchLabel}</a>
+  <details class="language-menu">
+    <summary aria-label={locale === "en" ? "Current language: English" : "Текущий язык: русский"}>
+      <span>{currentLanguage.flag}</span>
+      <span>{currentLanguage.label}</span>
+    </summary>
+    <div class="language-options">
+      <a href={withBase(switchPath)}>
+        <span>{nextLanguage.flag}</span>
+        <span>{nextLanguage.name}</span>
+      </a>
+    </div>
+  </details>
 </header>

@@ -11,8 +11,12 @@ const { label, secondaryLabel, secondaryHref } = Astro.props;
 ---
 
 <div class="cta-row">
-  <a class="button button-primary" href={appStoreUrl} target="_blank" rel="noopener noreferrer">
-    {label}
+  <a class="app-store-badge" href={appStoreUrl} target="_blank" rel="noopener noreferrer" aria-label={label}>
+    <img
+      src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+      alt={label}
+      title={label}
+    />
   </a>
   {secondaryLabel && secondaryHref && (
     <a class="button button-secondary" href={secondaryHref}>
