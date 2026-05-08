@@ -1,0 +1,22 @@
+---
+import { appStoreUrl } from "../data/site";
+
+interface Props {
+  label: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
+}
+
+const { label, secondaryLabel, secondaryHref } = Astro.props;
+---
+
+<div class="cta-row">
+  <a class="button button-primary" href={appStoreUrl} target="_blank" rel="noopener noreferrer">
+    {label}
+  </a>
+  {secondaryLabel && secondaryHref && (
+    <a class="button button-secondary" href={secondaryHref}>
+      {secondaryLabel}
+    </a>
+  )}
+</div>

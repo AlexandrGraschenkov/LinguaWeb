@@ -1,0 +1,19 @@
+---
+import Layout from "../../components/Layout.astro";
+import FAQAccordion from "../../components/FAQAccordion.astro";
+import { faq } from "../../data/faq";
+---
+
+<Layout
+  title="FAQ - Lingua Player"
+  description="Ответы о Lingua Player: онлайн-видео, оффлайн-файлы, субтитры, перевод, OCR, карточки, приватность и поддержка."
+  locale="ru"
+  currentPath="/ru/faq.html"
+>
+  <section class="page-hero compact">
+    <p class="eyebrow">FAQ</p>
+    <h1>Частые вопросы перед использованием Lingua Player.</h1>
+    <p>Короткие ответы про источники видео, оффлайн-просмотр, переводчики, карточки и приватность.</p>
+  </section>
+  <FAQAccordion items={faq.ru} />
+</Layout>

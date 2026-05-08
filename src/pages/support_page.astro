@@ -1,0 +1,39 @@
+---
+import Layout from "../components/Layout.astro";
+import { contactEmail } from "../data/site";
+---
+
+<Layout
+  title="Support - Lingua Player"
+  description="Contact Lingua Player support and find quick troubleshooting steps."
+  locale="en"
+  currentPath="/support_page.html"
+>
+  <section class="page-hero compact">
+    <p class="eyebrow">Support</p>
+    <h1>Need help with Lingua Player?</h1>
+    <p>Send a short description of the issue, your device model, iOS version, and app version. Screenshots or screen recordings help when the problem is visual.</p>
+  </section>
+
+  <section class="section">
+    <div class="support-grid">
+      <article class="support-card">
+        <h2>Contact</h2>
+        <p>Email support directly and include the video source or file type if the issue is playback-related.</p>
+        <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
+      </article>
+      <article class="support-card">
+        <h2>Quick checks</h2>
+        <p>Update the app, restart the device, confirm file access permissions, and test whether the same video works in another player.</p>
+      </article>
+      <article class="support-card">
+        <h2>Translation issues</h2>
+        <p>Check the selected translator, source language, target language, and whether you are using online or offline translation mode.</p>
+      </article>
+      <article class="support-card">
+        <h2>Purchases</h2>
+        <p>For App Store purchase problems, confirm the Apple ID used for the purchase and try restoring purchases inside the app.</p>
+      </article>
+    </div>
+  </section>
+</Layout>

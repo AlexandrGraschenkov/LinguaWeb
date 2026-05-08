@@ -1,0 +1,68 @@
+---
+import Layout from "../components/Layout.astro";
+import CTA from "../components/CTA.astro";
+import { home } from "../data/home";
+import { withBase } from "../lib/paths";
+
+const locale = "en";
+const content = home.en;
+---
+
+<Layout
+  title="Lingua Player - Video Player for Language Learning"
+  description="Learn languages with online videos, YouTube, offline files, subtitle translation, OCR, flashcards, and offline translation."
+  locale={locale}
+  currentPath="/"
+>
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">{content.eyebrow}</p>
+      <h1>{content.title}</h1>
+      <p class="lead">{content.lead}</p>
+      <CTA label={content.cta} secondaryLabel={content.secondaryCta} secondaryHref={withBase("/research.html")} />
+      <p class="proof-line">{content.proof}</p>
+    </div>
+
+    <div class="phone-stage" aria-hidden="true">
+      <div class="phone-stack">
+        <img src={withBase("/images/onboarding-series.jpg")} alt="" />
+        <img src={withBase("/images/onboarding-subtitles.jpg")} alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Core workflow</p>
+        <h2>From watching to remembering, without leaving the video.</h2>
+      </div>
+      <p>Lingua Player keeps the learning loop close to the content: understand the moment, save the word, review it later.</p>
+    </div>
+
+    <div class="feature-grid">
+      {content.sections.map((section) => (
+        <article class="feature-card">
+          <div>
+            <h3>{section.title}</h3>
+            <p>{section.text}</p>
+          </div>
+          <img src={withBase(section.image)} alt="" loading="lazy" />
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Details</p>
+        <h2>{content.featuresTitle}</h2>
+      </div>
+      <p>Use real videos as your input, then choose how much help you want from subtitles, translation, and review.</p>
+    </div>
+    <div class="pill-grid">
+      {content.features.map((feature) => <div class="pill">{feature}</div>)}
+    </div>
+  </section>
+</Layout>

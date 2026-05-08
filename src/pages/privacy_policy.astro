@@ -1,0 +1,14 @@
+---
+import Layout from "../components/Layout.astro";
+import LegalPage from "../components/LegalPage.astro";
+import { legal } from "../data/legal";
+---
+
+<Layout
+  title="Privacy Policy - Lingua Player"
+  description="Lingua Player privacy policy for the iOS application."
+  locale="en"
+  currentPath="/privacy_policy.html"
+>
+  <LegalPage {...legal.privacy.en} />
+</Layout>

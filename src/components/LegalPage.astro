@@ -1,0 +1,29 @@
+---
+interface LegalSection {
+  heading: string;
+  body: string[];
+}
+
+interface Props {
+  title: string;
+  updated: string;
+  sections: LegalSection[];
+}
+
+const { title, updated, sections } = Astro.props;
+---
+
+<section class="page-hero compact">
+  <p class="eyebrow">Lingua Player</p>
+  <h1>{title}</h1>
+  <p>{updated}</p>
+</section>
+
+<section class="legal-content">
+  {sections.map((section) => (
+    <article>
+      <h2>{section.heading}</h2>
+      {section.body.map((paragraph) => <p>{paragraph}</p>)}
+    </article>
+  ))}
+</section>

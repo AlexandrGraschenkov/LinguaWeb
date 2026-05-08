@@ -1,0 +1,68 @@
+---
+import Layout from "../../components/Layout.astro";
+import CTA from "../../components/CTA.astro";
+import { home } from "../../data/home";
+import { withBase } from "../../lib/paths";
+
+const locale = "ru";
+const content = home.ru;
+---
+
+<Layout
+  title="Lingua Player - видеоплеер для изучения языков"
+  description="Учите языки через онлайн-видео, YouTube, оффлайн-файлы, перевод субтитров, OCR, карточки и оффлайн-перевод."
+  locale={locale}
+  currentPath="/ru/"
+>
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">{content.eyebrow}</p>
+      <h1>{content.title}</h1>
+      <p class="lead">{content.lead}</p>
+      <CTA label={content.cta} secondaryLabel={content.secondaryCta} secondaryHref={withBase("/ru/research.html")} />
+      <p class="proof-line">{content.proof}</p>
+    </div>
+
+    <div class="phone-stage" aria-hidden="true">
+      <div class="phone-stack">
+        <img src={withBase("/images/onboarding-series.jpg")} alt="" />
+        <img src={withBase("/images/onboarding-subtitles.jpg")} alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Основной сценарий</p>
+        <h2>От просмотра к запоминанию, не выходя из видео.</h2>
+      </div>
+      <p>Lingua Player держит учебный цикл рядом с контентом: понять момент, сохранить слово, повторить его позже.</p>
+    </div>
+
+    <div class="feature-grid">
+      {content.sections.map((section) => (
+        <article class="feature-card">
+          <div>
+            <h3>{section.title}</h3>
+            <p>{section.text}</p>
+          </div>
+          <img src={withBase(section.image)} alt="" loading="lazy" />
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Детали</p>
+        <h2>{content.featuresTitle}</h2>
+      </div>
+      <p>Используйте реальные видео как input и выбирайте, сколько помощи нужно от субтитров, перевода и повторения.</p>
+    </div>
+    <div class="pill-grid">
+      {content.features.map((feature) => <div class="pill">{feature}</div>)}
+    </div>
+  </section>
+</Layout>

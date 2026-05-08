@@ -1,0 +1,31 @@
+---
+import { nav } from "../data/site";
+import { alternateLocalePath, withBase } from "../lib/paths";
+
+interface Props {
+  locale: "en" | "ru";
+  currentPath: string;
+}
+
+const { locale, currentPath } = Astro.props;
+const switchPath = alternateLocalePath(currentPath, locale);
+const switchLabel = locale === "en" ? "RU" : "EN";
+const homePath = locale === "en" ? "/" : "/ru/";
+---
+
+<header class="site-header">
+  <a class="brand" href={withBase(homePath)} aria-label="Lingua Player home">
+    <img src={withBase("/images/app-icon.jpg")} alt="" />
+    <span>Lingua Player</span>
+  </a>
+
+  <nav class="main-nav" aria-label={locale === "en" ? "Main navigation" : "Основная навигация"}>
+    {nav[locale].map((item) => (
+      <a href={withBase(item.href)} class:list={{ active: item.href === currentPath }}>
+        {item.label}
+      </a>
+    ))}
+  </nav>
+
+  <a class="language-link" href={withBase(switchPath)}>{switchLabel}</a>
+</header>

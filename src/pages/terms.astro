@@ -1,0 +1,14 @@
+---
+import Layout from "../components/Layout.astro";
+import LegalPage from "../components/LegalPage.astro";
+import { legal } from "../data/legal";
+---
+
+<Layout
+  title="Terms of Use - Lingua Player"
+  description="Lingua Player terms of use for the iOS application."
+  locale="en"
+  currentPath="/terms.html"
+>
+  <LegalPage {...legal.terms.en} />
+</Layout>

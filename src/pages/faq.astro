@@ -1,0 +1,19 @@
+---
+import Layout from "../components/Layout.astro";
+import FAQAccordion from "../components/FAQAccordion.astro";
+import { faq } from "../data/faq";
+---
+
+<Layout
+  title="FAQ - Lingua Player"
+  description="Answers about Lingua Player online video, offline video, subtitles, translation, OCR, flashcards, privacy, and support."
+  locale="en"
+  currentPath="/faq.html"
+>
+  <section class="page-hero compact">
+    <p class="eyebrow">FAQ</p>
+    <h1>Questions people usually ask before using Lingua Player.</h1>
+    <p>Short answers about video sources, offline playback, translators, flashcards, and privacy.</p>
+  </section>
+  <FAQAccordion items={faq.en} />
+</Layout>

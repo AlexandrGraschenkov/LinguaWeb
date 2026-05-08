@@ -1,0 +1,34 @@
+---
+import Layout from "../../components/Layout.astro";
+import ResearchCard from "../../components/ResearchCard.astro";
+import { research, researchIntro } from "../../data/research";
+---
+
+<Layout
+  title="Исследования - Lingua Player"
+  description="Доказательная база подходов: аудиовизуальный input, субтитры, изучение слов и самостоятельное мобильное изучение языка."
+  locale="ru"
+  currentPath="/ru/research.html"
+>
+  <section class="page-hero">
+    <p class="eyebrow">Evidence-informed learning</p>
+    <h1>{researchIntro.ru.title}</h1>
+    <p class="lead">{researchIntro.ru.lead}</p>
+  </section>
+
+  <section class="section">
+    <div class="research-grid">
+      {research.map((item) => (
+        <ResearchCard
+          title={item.title}
+          authors={item.authors}
+          year={item.year}
+          publication={item.publication}
+          url={item.url}
+          doi={item.doi}
+          summary={item.ru}
+        />
+      ))}
+    </div>
+  </section>
+</Layout>
