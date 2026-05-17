@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Lingüa Player promo code"><meta name="theme-color" content="#1f1f1f"><title>Thank You - Lingüa Player</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800&display=swap" rel="stylesheet"><link rel="icon" type="image/jpeg" href="/LinguaWeb/images/app-icon.jpg"><link rel="stylesheet" href="/LinguaWeb/_astro/faq.Dhc1vUPV.css"></head> <body class="promo-body"> <main class="promo-page"> <section class="promo-panel" aria-labelledby="promo-title"> <img class="promo-icon" src="/LinguaWeb/images/app-icon.jpg" alt=""> <p class="eyebrow">Lingüa Player</p> <h1 id="promo-title">Thank you for using the app</h1> <p>Open this page on the mobile phone where Lingüa Player is installed.</p> <p id="promo-status">Opening your promo code in the app.</p> <p id="promo-fallback">
+If the app did not open automatically,
+<a id="promo-link" href="#" aria-disabled="true">tap here</a>.
+</p> </section> </main> <script>
+      const params = new URLSearchParams(window.location.search);
+      const rawToken = params.get("token") || params.get("code");
+      const token = rawToken ? rawToken.trim() : "";
+      const promoStatus = document.getElementById("promo-status");
+      const promoFallback = document.getElementById("promo-fallback");
+      const promoLink = document.getElementById("promo-link");
+
+      if (token) {
+        const deepLink = `lingua://promo/code?token=${encodeURIComponent(token)}`;
+        promoLink.setAttribute("href", deepLink);
+        promoLink.removeAttribute("aria-disabled");
+
+        window.setTimeout(() => {
+          window.location.href = deepLink;
+        }, 300);
+      } else {
+        promoStatus.textContent = "Promo code was not found in the link.";
+        promoFallback.hidden = true;
+      }
+    </script> </body> </html>
